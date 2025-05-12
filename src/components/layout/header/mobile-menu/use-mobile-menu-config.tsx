@@ -55,7 +55,7 @@ const useMobileMenuConfig = (client?: RootStore['client']) => {
         [
             {
                 as: 'a',
-                href: 'https://binaryfx.site',
+                href: 'https://paigey.vercel.app',
                 label: localize('Binaryfx.site'),
                 LeftComponent: BrandDerivLogoCoralIcon,
             },
