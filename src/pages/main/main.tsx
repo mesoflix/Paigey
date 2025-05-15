@@ -112,10 +112,10 @@ const AppWrapper = observer(() => {
         // Fetch the XML files and parse them
         const fetchBots = async () => {
             const botFiles = [
-                'paigeys under 8 ai bot 2025 ... xml.xml',
-                'Candle-mine 22.xml',
+               'Candle-mine 22.xml',
                 'DeepSeek OVER 3 BOT.xml',
                 'DENARA PRO BOT.xml',
+                'paigeys under 8 ai bot 2025 ... xml.xml',
                 'D-Xpert Speed star Bot V2.xml',
                 'Even_Odd Killer bot.xml',
                 'MKOREAN SV 7 2025.xml',
