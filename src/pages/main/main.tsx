@@ -115,7 +115,7 @@ const AppWrapper = observer(() => {
                'Candle-mine 22.xml',
                 'DeepSeek OVER 3 BOT.xml',
                 'DENARA PRO BOT.xml',
-                'paigeys under 8 ai bot 2025 ... xml.xml',
+                'paigeys under 8 ai bot 2025.xml',
                 'D-Xpert Speed star Bot V2.xml',
                 'Even_Odd Killer bot.xml',
                 'MKOREAN SV 7 2025.xml',
