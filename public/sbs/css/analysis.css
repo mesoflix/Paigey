@@ -1,0 +1,396 @@
+body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      padding: 10px;
+      margin: 0;
+    }
+    .top-bar {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .top-bar * { font-size: 0.775rem  !important; /* Reduced font size for all elements in top-bar */ }
+    .top-bar input, .top-bar select {
+      padding: 5px;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 0 0 3px orange;
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+    .top-bar button {
+      background-color: #1e1e1e;
+      color: orange;
+      border-radius: 6px;
+      padding: 4px 8px;  /* Reduced padding for smaller button size */
+      box-shadow: 0 0 3px orange;
+      border: none;
+      font-size: 14px;  /* Reduced font size */
+    }
+    .top-bar .price {
+      font-weight: bold;
+      color: orange;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .panel {
+      background-color: #1e1e1e;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255,165,0,0.3);
+      display: flex;
+      flex-direction: column;
+    }
+    .panel input {
+      color: orange !important; /* Force orange color */
+      background-color: #121212; /* Keep the original background color */
+      border: none;
+      border-radius: 4px;
+      text-align: center;
+      padding: 4px;
+    }
+    .panel select {
+      color: orange !important; /* Set text color to orange */
+      background-color: #121212; /* Keep the original background color */
+      border: none;
+      border-radius: 4px;
+      padding: 4px;
+      text-align: center;
+    }
+    .panel > *:not(.panel-controls) {
+      flex-shrink: 0;
+    }
+
+    .panel-controls {
+      margin-top: auto;
+    }
+    .circle-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px 10px;
+      justify-items: center;
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+    .circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #121212;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 0 8px orange;
+    }
+    .circle::after {
+      content: attr(data-value) '%';
+      position: absolute;
+      bottom: -16px;
+      font-size: 10px;
+      color: orange;
+    }
+    .circle.lowest {
+      border: 3px solid red;
+    }
+    .circle.highest {
+      border: 3px solid green;
+    }
+    .divider {
+      border-top: 0.01px solid orange;
+      margin: 1px 0 0px;
+    }
+    .button-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .button-grid button {
+      padding: 8px 12px;  /* Reduced padding */
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;  /* Reduced font size */
+      box-shadow: 0 0 8px orange;
+    }
+    .even-odd-bar, .rise-fall-bar, .under-over-bar {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      font-size: 10px;
+      color: orange;
+    }
+    .button-grid button {
+      font-family: 'Poppins', ghetto;  /* Apply the custom font */
+      font-weight: bold;  /* Make the text bold */
+      font-size: 14px;  /* Adjust font size if needed */
+      color: black;  /* Set text color to orange */
+    }
+    .progress {
+      display: flex;
+      height: 10px;
+      margin-top: 5px;
+    }
+    .progress div {
+      height: 100%;
+    }
+    .green { background-color: #4CAF50; }
+    .red { background-color: #f44336; }
+    .blue { background-color: #2196F3; }
+    .light-blue { background-color: #81D4FA; }
+    .light-red { background-color: #FFCDD2; }
+    .panel-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      gap: 10px;
+      flex-wrap: wrap;
+      border-top: 0.01px solid orange;
+      padding-top: 5px;
+    }
+    .panel-controls label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 10px;
+      font-weight: bold;
+    }
+    .panel-controls input {
+      width: 30px;  /* Reduced width to fit 4 characters */
+      padding: 4px;
+      background-color: #121212;
+      border: none;  /* Removed border */
+      color: white;
+      border-radius: 4px;
+      text-align: center;  /* Centering text */
+    }
+    .panel-controls button {
+      padding: 6px 12px;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;  /* Reduced font size */
+    }
+    .hidden {
+      display: none;
+    }
+    .icon-button {
+      display: flex;
+      align-items: center;
+      gap: 15px; /* Added gap between buttons */
+    }
+    .icon-button i {
+      font-size: 14px;  /* Reduced font size for the icon */
+    }
+    .icon-button button {
+      background-color: transparent;
+      color: orange;
+      border: none;
+      border-radius: 50%;
+      width: 30px; /* Reduced size of the button */
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 8px orange;
+    }
+    .icon-button button:nth-child(1) {
+      background-color: transparent;
+      box-shadow: 0 0 8px orange;  /* Orange glow for the settings button */
+    }
+    .icon-button button:nth-child(2) {
+      background-color: blue;
+      box-shadow: 0 0 8px orange; /* brighter glow */
+      animation: pulseGlow 1.5s infinite;
+    }
+
+    /* Dialog Styling */
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1e1e1e;
+  padding: 30px;  /* Increased padding for more space */
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.6);
+  z-index: 9999;
+  display: none;
+  min-width: 300px;  /* Set a minimum width */
+}
+
+.dialog .dialog-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: orange;  /* Set title color to orange */
+  margin-bottom: 15px;  /* Add space below title */
+}
+
+/* Group the label and input together */
+.form-group {
+  margin-bottom: 15px;  /* Add space between fields */
+}
+
+.form-group label {
+  display: block;  /* Make the label block to sit above the input */
+  margin-bottom: 5px;  /* Add space between label and input */
+  color: white;  /* Set label color */
+}
+
+.dialog input {
+  margin: 5px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #121212;
+  color: #fff;
+  width: 100%;  /* Make inputs stretch to full width of the container */
+}
+
+.dialog button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 8px 15px;  /* Increased padding */
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+    .glow {
+      animation: glowPulse 0.5s infinite ease-in-out;
+      box-shadow: 0 0 5px #00ffcc;
+    }
+
+    @keyframes glowPulse {
+      0% {
+        box-shadow: 0 0 5px #00ffcc;
+        opacity: 1;
+      }
+      50% {
+        box-shadow: 0 0 20px #00ffcc;
+        opacity: 0.4;
+      }
+      100% {
+        box-shadow: 0 0 5px #00ffcc;
+        opacity: 1;
+      }
+    }
+
+
+    /* Snackbar */
+    .snackbar {
+      visibility: hidden;
+      min-width: 250px;
+      margin-left: -125px;
+      background-color: #4CAF50;
+      color: #fff;
+      text-align: center;
+      border-radius: 2px;
+      padding: 16px;
+      position: fixed;
+      z-index: 1;
+      bottom: 30px;
+      left: 50%;
+      font-size: 17px;
+      box-shadow: 0 0 10px orange;
+    }
+    .snackbar.show {
+      visibility: visible;
+      animation: fadein 0.5s, fadeout 0.5s 3s;
+    }
+    @keyframes fadein {
+      from { bottom: 0; opacity: 0; }
+      to { bottom: 30px; opacity: 1; }
+    }
+    @keyframes fadeout {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+    
+    #slider {
+      position: absolute;
+      top: 0px; /* set this to match your header's height */
+      height: 80%;
+      width: 30%;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      z-index: 2;
+      transition: transform 0.4s ease;
+
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      display: none;  
+    }
+
+    #slider.left {
+      left: 0;
+      transform: translateX(-100%);
+    }
+
+    #slider.right {
+      right: 0;
+      transform: translateX(100%);
+    }
+
+    #slider.open-left {
+      transform: translateX(0);
+    }
+
+    #slider.open-right {
+      transform: translateX(0);
+    }
+
+
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: 1fr; /* Stack panels on smaller screens */
+      }
+
+      .top-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .icon-button {
+        justify-content: center;
+      }
+
+      .top-bar input,
+      .top-bar select,
+      .top-bar button,
+      .panel input,
+      .panel select,
+      .button-grid button,
+      .icon-button button {
+        transition: all 0.2s ease;
+      }
+
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      input:focus,
+      select:focus {
+        outline: none;
+        box-shadow: 0 0 5px orange;
+      }
+
+      #slider {
+        width: 100%;  
+      }
+      }
