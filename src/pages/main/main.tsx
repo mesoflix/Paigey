@@ -23,6 +23,7 @@ import RunStrategy from '../dashboard/run-strategy';
 
 const Chart = lazy(() => import('../chart'));
 const Tutorial = lazy(() => import('../tutorials'));
+const Analysis = lazy(() => import('../analysis/analysis'));
 
 const DashboardIcon = () => (
     <svg width="20" height="20" fill="var(--text-general)" viewBox="0 0 24 24">
@@ -188,7 +189,9 @@ const AppWrapper = observer(() => {
     }, [load_modal, setActiveTab]);
 
     const showRunPanel = [DBOT_TABS.BOT_BUILDER, DBOT_TABS.CHART, DBOT_TABS.ANALYSIS_TOOL, DBOT_TABS.SIGNALS].includes(active_tab);
-
+const handleLinkChange = (path: string) => {
+        navigate(`/${path}`);
+    };
     return (
         <React.Fragment>
             <div className='main'>
@@ -209,7 +212,10 @@ const AppWrapper = observer(() => {
                                 <Tutorial handleTabChange={handleTabChange} />
                             </Suspense>
                         </div>
-                        <div label={<><AnalysisToolIcon /><Localize i18n_default_text='Analysis Tool' /></>} id='id-analysis-tool'>
+                        <div label={<><AnalysisToolIcon /><Localize i18n_default_text='Analysis Tool' /></>} id='id-analysis-tool'
+                         onClick={() => handleLinkChange('analysis')}
+                           
+                            >
                             <iframe src='https://binaryfx.site/api_binaryfx' width='100%' height='500px' frameBorder='0'></iframe>
                         </div>
                         <div label={<><SignalsIcon /><Localize i18n_default_text='Signals' /></>} id='id-signals'>
