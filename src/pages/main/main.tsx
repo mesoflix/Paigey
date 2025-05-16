@@ -112,18 +112,13 @@ const AppWrapper = observer(() => {
         // Fetch the XML files and parse them
         const fetchBots = async () => {
             const botFiles = [
-               'Candle-mine 22.xml',
-                'DeepSeek OVER 3 BOT.xml',
-                'DENARA PRO BOT.xml',
+                'SPEEDBOT_updated.xml',
+                'paigeys matches bot  25.xml',
                 'paigeys under 8 ai bot 2025.xml',
-                'D-Xpert Speed star Bot V2.xml',
-                'Even_Odd Killer bot.xml',
-                'MKOREAN SV 7 2025.xml',
-                'Over 1 Recovery Over 4.xml',
-                'Over 1 Under 8 Auto-Switch Pro.xml',
-                'OVER 3 AI Bot.xml',
-                'Over-Sight-Digit 2 Ai DBot.xml',
-                'Upgraded Candlemine.xml',
+                'paigey over 0 ai bot 25.xml',
+                'paigey under 7 ai bot 25.xml',
+                'paigeys over 1 ai bot 2025.xml',
+                'paigeys new ai bot 2025.xml',
                 // Add more paths to your XML files
             ];
             const botPromises = botFiles.map(async (file) => {
