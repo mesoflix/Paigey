@@ -213,8 +213,12 @@ const handleLinkChange = (path: string) => {
                             </Suspense>
                         </div>
                         <div label={<><AnalysisToolIcon /><Localize i18n_default_text='Analysis Tool' /></>} id='id-analysis-tool'
-                             onClick={() => handleLinkChange('analysis')    
+                             onClick={() => handleLinkChange('analysis')}
+                            style={{ cursor: 'pointer' }}
                         >
+                            <Suspense fallback={<ChunkLoader message={localize('Please wait, loading page...')} />}>
+                                <Analysis />
+                            </Suspense>
                         </div>
                         <div label={<><SignalsIcon /><Localize i18n_default_text='Signals' /></>} id='id-signals'>
                             <iframe src='signals' width='100%' height='500px' frameBorder='0'></iframe>
