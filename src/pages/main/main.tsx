@@ -24,6 +24,7 @@ import RunStrategy from '../dashboard/run-strategy';
 const Chart = lazy(() => import('../chart'));
 const Tutorial = lazy(() => import('../tutorials'));
 const Analysis = lazy(() => import('../analysis/analysis'));
+const BotsPage = lazy(() => import('../bots/freebots')); // Assuming you created BotsPage.tsx
 
 const DashboardIcon = () => (
     <svg width="20" height="20" fill="var(--text-general)" viewBox="0 0 24 24">
@@ -224,24 +225,19 @@ const handleLinkChange = (path: string) => {
                             <iframe src='signals' width='100%' height='500px' frameBorder='0'></iframe>
                         </div>
                         
-                        <div label={<><FreeBotsIcon /><Localize i18n_default_text='Free Bots' /></>} id='id-free-bots'>
-                            <div className='free-bots'>
-                                <h2 className='free-bots__heading'><Localize i18n_default_text='Free Bots' /></h2>
-                                <div className='free-bots__content-wrapper'>
-                                    <ul className='free-bots__content'>
-                                        {bots.map((bot, index) => (
-                                            <li className='free-bot' key={index} onClick={() => {
-                                                handleBotClick(bot);
-                                            }}>
-                                                <BotIcon />
-                                                <div className='free-bot__details'>
-                                                    <h3 className='free-bot__title'>{bot.title}</h3>
-                                                </div>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
+                        <div label={<><FreeBotsIcon /><Localize i18n_default_text='Free Bots' /></>}
+                            id='id-free-bots'
+                            onClick={() => handleLinkChange('bots')}
+                            style={{ cursor: 'pointer' }}
+                         >
+                            <Suspense fallback={<ChunkLoader message={localize('Please wait, loading Bots page...')} />}>
+                                <BotsPage
+                                    onBotSelect={() => {
+                                        handleTabChange(DBOT_TABS.BOT_BUILDER);
+                                    }}
+                                />
+                            </Suspense>
+                            
                         </div>
                     </Tabs>
                 </div>
