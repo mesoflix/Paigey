@@ -63,6 +63,12 @@ const useMobileMenuConfig = (client?: RootStore['client']) => {
                 LeftComponent: BrandDerivLogoCoralIcon,
             },
             {
+                as: 'button',
+                label: localize('Dark theme'),
+                LeftComponent: LegacyTheme1pxIcon,
+                RightComponent: <ToggleSwitch value={is_dark_mode_on} onChange={toggleTheme} />,
+            },
+            {
                           as: 'a',
                           href: 'https://wa.me/254703699465',
                           label: localize('WhatsApp'),
@@ -84,12 +90,7 @@ const useMobileMenuConfig = (client?: RootStore['client']) => {
                           LeftComponent: SocialTiktokBrandIcon,
                           target: '_blank',
             },
-            {
-                as: 'button',
-                label: localize('Dark theme'),
-                LeftComponent: LegacyTheme1pxIcon,
-                RightComponent: <ToggleSwitch value={is_dark_mode_on} onChange={toggleTheme} />,
-            },
+            
         ],
         (
             [
