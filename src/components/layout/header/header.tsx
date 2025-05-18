@@ -108,7 +108,6 @@ const AppHeader = observer(() => {
             <Wrapper variant='left'>
                 <AppLogo />
                 <MobileMenu />
-                <TelegramIcon />
             </Wrapper>
             <Wrapper variant='right'>{renderAccountSection()}</Wrapper>
         </Header>
