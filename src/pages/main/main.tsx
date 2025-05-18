@@ -80,13 +80,13 @@ const BotIcon = () => (
 
 const AppWrapper = observer(() => {
     const { connectionStatus } = useApiBase();
-    const { freebots, load_modal, run_panel, quick_strategy, summary_card } = useStore();
+    const { bots, load_modal, run_panel, quick_strategy, summary_card } = useStore();
     const {
         active_tab,
         is_chart_modal_visible,
         is_trading_view_modal_visible,
         setActiveTab,
-    } = freebots;
+    } = bots;
     const { onEntered } = load_modal;
     const { is_dialog_open, dialog_options, onCancelButtonClick, onCloseDialog, onOkButtonClick, stopBot } = run_panel;
     const { cancel_button_text, ok_button_text, title, message } = dialog_options as { [key: string]: string };
