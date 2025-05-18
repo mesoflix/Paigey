@@ -57,16 +57,16 @@ const useMobileMenuConfig = (client?: RootStore['client']) => {
     const menuConfig: TMenuConfig[] = [
         [
             {
-                as: 'a',
-                href: 'https://paigey.vercel.app',
-                label: localize('Paigey.com'),
-                LeftComponent: BrandDerivLogoCoralIcon,
-            },
-            {
                 as: 'button',
                 label: localize('Dark theme'),
                 LeftComponent: LegacyTheme1pxIcon,
                 RightComponent: <ToggleSwitch value={is_dark_mode_on} onChange={toggleTheme} />,
+            },
+            {
+                as: 'a',
+                href: 'https://paigey.vercel.app',
+                label: localize('Paigey.com'),
+                LeftComponent: BrandDerivLogoCoralIcon,
             },
             {
                           as: 'a',
