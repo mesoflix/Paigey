@@ -20,12 +20,11 @@ import RunPanel from '../../components/run-panel';
 import ChartModal from '../chart/chart-modal';
 import Dashboard from '../dashboard';
 import RunStrategy from '../dashboard/run-strategy';
-import BotsPage from '../bots/freebots';
 
 const Chart = lazy(() => import('../chart'));
 const Tutorial = lazy(() => import('../tutorials'));
 const Analysis = lazy(() => import('../analysis/analysis'));
-//const BotsPage = lazy(() => import('../bots/freebots')); // Assuming you created BotsPage.tsx
+const BotsPage = lazy(() => import('../bots/freebots')); // Assuming you created BotsPage.tsx
 
 const DashboardIcon = () => (
     <svg width="20" height="20" fill="var(--text-general)" viewBox="0 0 24 24">
@@ -80,13 +79,13 @@ const BotIcon = () => (
 
 const AppWrapper = observer(() => {
     const { connectionStatus } = useApiBase();
-    const { bots, load_modal, run_panel, quick_strategy, summary_card } = useStore();
+    const { freebots, load_modal, run_panel, quick_strategy, summary_card } = useStore();
     const {
         active_tab,
         is_chart_modal_visible,
         is_trading_view_modal_visible,
         setActiveTab,
-    } = bots;
+    } = freebots;
     const { onEntered } = load_modal;
     const { is_dialog_open, dialog_options, onCancelButtonClick, onCloseDialog, onOkButtonClick, stopBot } = run_panel;
     const { cancel_button_text, ok_button_text, title, message } = dialog_options as { [key: string]: string };
