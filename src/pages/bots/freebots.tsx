@@ -61,7 +61,7 @@ const FreeBots = observer(() => {
         },
         {
             name: 'paigey under 7 ai bot 25',
-            description: 'Under 7 ai bot,
+            description: 'Under 7 ai bot',
             file: 'paigey under 7 ai bot 25.xml',
             icon: '🤖',
         },
