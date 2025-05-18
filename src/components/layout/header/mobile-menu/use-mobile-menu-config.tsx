@@ -60,6 +60,13 @@ const useMobileMenuConfig = (client?: RootStore['client']) => {
                 LeftComponent: BrandDerivLogoCoralIcon,
             },
             {
+                          as: 'a',
+                          href: 'https://wa.me/254703699465',
+                          label: localize('WhatsApp'),
+                          LeftComponent: LegacyWhatsappIcon,
+                          target: '_blank',
+            },
+            {
                 as: 'button',
                 label: localize('Dark theme'),
                 LeftComponent: LegacyTheme1pxIcon,
