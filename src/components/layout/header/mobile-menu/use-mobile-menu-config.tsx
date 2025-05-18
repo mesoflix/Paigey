@@ -20,6 +20,8 @@ import {
     LegacyWhatsappIcon,
     LegacyTelegramIcon,
 } from '@deriv/quill-icons/Legacy';
+import { SocialTiktokBrandIcon } from '@deriv/quill-icons/Social;
+
 import { BrandDerivLogoCoralIcon } from '@deriv/quill-icons/Logo';
 import { useTranslations } from '@deriv-com/translations';
 import { ToggleSwitch } from '@deriv-com/ui';
