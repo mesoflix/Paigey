@@ -24,7 +24,7 @@ const router = createBrowserRouter(
         <Route
             path='/'
             element={
-                <Suspense fallback={<ChunkLoader message={localize('PAIGEY.COM)} />}>
+                <Suspense fallback={<ChunkLoader message={localize('Initializing PAIGEY ...')} />}>
                     <TranslationProvider defaultLang='EN' i18nInstance={i18nInstance}>
                         <StoreProvider>
                             <RoutePromptDialog />
