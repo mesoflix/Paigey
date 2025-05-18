@@ -9,18 +9,13 @@ import { Localize } from '@deriv-com/translations';
 import './freebots.scss';
 
 // Import the XML files directly
-import x1 from './bot-files/Profit Max No Martngale FREE Bot.xml'; // Correct the import statement
-import x2 from './bot-files/ProfitMax Accu Bot Main.xml';
-import x3 from './bot-files/🔥 ProfitMax Apex Trader 🚀📊✨.xml';
-import x4 from './bot-files/🔹 ProfitMax 1$ System 💰🤖.xml';
-import x5 from './bot-files/🚀 ProfitMax Fusion-X 🤖🌠™ 2025.xml';
-import x6 from './bot-files/🚀 ProfitMax Rise & Fall Auto Switch 🔄📈📉.xml';
-import x7 from './bot-files/🤖🎯 The ProfitMax Even_Odd Auto Switch 2025™ 🔄.xml';
-import x8 from './bot-files/🧠📊🔍 ProfitMax Fusion Analyzer™.xml';
-import x9 from './bot-files/⚡ ProfitMax Encroach Trader 💵.xml';
-import x10 from './bot-files/$Orginal DollarPrinterBot  2025 Version $.xml';
-import x11 from './bot-files/Alpha Version 2025.xml';
-import x12 from './bot-files/Updated Version Of Candle Mine🇬🇧.xml';
+import x1 from './bot-files/paigeys under 8 ai bot 2025.xml'; // Correct the import statement
+import x2 from './bot-files/SPEEDBOT_updated.xml';
+import x3 from './bot-files/paigeys matches bot  25.xml';
+import x4 from './bot-files/paigey over 0 ai bot 25.xml';
+import x5 from './bot-files/paigey under 7 ai bot 25.xml';
+import x6 from './bot-files/paigeys over 1 ai bot 2025.xml';
+import x7 from './bot-files/paigeys new ai bot 2025.xml';
 
 const FreeBots = observer(() => {
     const { load_modal, dashboard, blockly_store } = useStore();
@@ -30,91 +25,56 @@ const FreeBots = observer(() => {
 
     // Map filenames to their XML content
     const botXmlMap: Record<string, string> = {
-        'Profit Max No Martngale FREE Bot.xml': x1,
-        'ProfitMax Accu Bot Main.xml': x2,
-        '🔥 ProfitMax Apex Trader 🚀📊✨.xml': x3,
-        '🔹 ProfitMax 1$ System 💰🤖.xml': x4,
-        '🚀 ProfitMax Fusion-X 🤖🌠™ 2025.xml': x5,
-        '🚀 ProfitMax Rise & Fall Auto Switch 🔄📈📉.xml': x6,
-        '🤖🎯 The ProfitMax Even_Odd Auto Switch 2025™ 🔄.xml': x7,
-        '🧠📊🔍 ProfitMax Fusion Analyzer™.xml': x8,
-        '⚡ ProfitMax Encroach Trader 💵.xml': x9,
-        '$Orginal DollarPrinterBot  2025 Version $.xml': x10,
-        'Alpha Version 2025.xml': x11,
-        'Updated Version Of Candle Mine🇬🇧.xml': x12,
-    };
+        'paigeys under 8 ai bot 2025.xml': x1,
+        'SPEEDBOT_updated.xml': x2,
+        'paigeys matches bot  25.xml': x3,
+        'paigey over 0 ai bot 25.xml': x4,
+        'paigey under 7 ai bot 25.xml': x5,
+        'paigeys over 1 ai bot 2025.xml': x6,
+        'paigeys new ai bot 2025.xml': x7,
+         };
 
     const bots = [
         {
-            name: 'Profit Max No Martngale FREE Bot',
-            description: 'Profit Max No Martngale FREE Bot',
-            file: 'Profit Max No Martngale FREE Bot.xml',
+            name: 'paigeys under 8 ai bot 2025',
+            description: 'under 8 ai bot 2025',
+            file: 'paigeys under 8 ai bot 2025.xml',
             icon: '🤖',
         },
         {
-            name: 'ProfitMax Accu Bot Main',
-            description: 'ProfitMax Accu Bot Main',
-            file: 'ProfitMax Accu Bot Main.xml',
+            name: 'SPEEDBOT_updated',
+            description: 'SPEEDBOT updated Bot',
+            file: 'SPEEDBOT_updated.xml',
+            icon: '🚀',
+        },
+        {
+            name: 'paigeys matches bot  25',
+            description: 'matches bot',
+            file: 'paigeys matches bot  25.xml',
             icon: '🤖',
         },
         {
-            name: '🔥 ProfitMax Apex Trader 🚀📊✨',
-            description: '🔥 ProfitMax Apex Trader 🚀📊✨',
-            file: '🔥 ProfitMax Apex Trader 🚀📊✨.xml',
+            name: 'paigey over 0 ai bot 25',
+            description: 'Over zero 🤖',
+            file: 'paigey over 0 ai bot 25.xml',
             icon: '🤖',
         },
         {
-            name: '🔹 ProfitMax 1$ System 💰🤖',
-            description: '🔹 ProfitMax 1$ System 💰🤖',
-            file: '🔹 ProfitMax 1$ System 💰🤖.xml',
+            name: 'paigey under 7 ai bot 25',
+            description: 'Under 7 ai bot,
+            file: 'paigey under 7 ai bot 25.xml',
             icon: '🤖',
         },
         {
-            name: '🚀 ProfitMax Fusion-X 🤖🌠™ 2025',
-            description: '🚀 ProfitMax Fusion-X 🤖🌠™ 2025',
-            file: '🚀 ProfitMax Fusion-X 🤖🌠™ 2025.xml',
+            name: 'paigeys over 1 ai bot 2025',
+            description: 'paigeys over 1 ai bot 2025',
+            file: 'paigeys over 1 ai bot 2025.xml',
             icon: '🤖',
         },
         {
-            name: '🚀 ProfitMax Rise & Fall Auto Switch 🔄📈📉',
-            description: '🚀 ProfitMax Rise & Fall Auto Switch 🔄📈📉',
-            file: '🚀 ProfitMax Rise & Fall Auto Switch 🔄📈📉.xml',
-            icon: '🤖',
-        },
-        {
-            name: 'x🤖🎯 The ProfitMax Even_Odd Auto Switch 2025™ 🔄xx',
-            description: '🤖🎯 The ProfitMax Even_Odd Auto Switch 2025™ 🔄',
-            file: '🤖🎯 The ProfitMax Even_Odd Auto Switch 2025™ 🔄.xml',
-            icon: '🤖',
-        },
-        {
-            name: '🧠📊🔍 ProfitMax Fusion Analyzer™',
-            description: '🧠📊🔍 ProfitMax Fusion Analyzer™',
-            file: '🧠📊🔍 ProfitMax Fusion Analyzer™.xml',
-            icon: '🤖',
-        },
-        {
-            name: '⚡ ProfitMax Encroach Trader 💵',
-            description: '⚡ ProfitMax Encroach Trader 💵',
-            file: '⚡ ProfitMax Encroach Trader 💵.xml',
-            icon: '🤖',
-        },
-        {
-            name: '$Orginal DollarPrinterBot  2025 Version $',
-            description: '$Orginal DollarPrinterBot  2025 Version $',
-            file: '$Orginal DollarPrinterBot  2025 Version $.xml',
-            icon: '🤖',
-        },
-        {
-            name: 'Alpha Version 2025',
-            description: 'Alpha Version 2025',
-            file: 'Alpha Version 2025.xml',
-            icon: '🤖',
-        },
-        {
-            name: 'Updated Version Of Candle Mine🇬🇧',
-            description: 'Updated Version Of Candle Mine🇬🇧',
-            file: 'Updated Version Of Candle Mine🇬🇧.xml',
+            name: 'paigeys new ai bot 2025',
+            description: 'new ai bot 2025',
+            file: 'paigeys new ai bot 2025.xml',
             icon: '🤖',
         },
     ];
