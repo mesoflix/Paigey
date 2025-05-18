@@ -67,6 +67,13 @@ const useMobileMenuConfig = (client?: RootStore['client']) => {
                           target: '_blank',
             },
             {
+                          as: 'a',
+                          href: 'https://wa.me/254703699465',
+                          label: localize('Telegram),
+                          LeftComponent: LegacyWhatsappIcon,
+                          target: '_blank',
+            },
+            {
                 as: 'button',
                 label: localize('Dark theme'),
                 LeftComponent: LegacyTheme1pxIcon,
@@ -78,9 +85,9 @@ const useMobileMenuConfig = (client?: RootStore['client']) => {
                 cs_chat_whatsapp
                     ? {
                           as: 'a',
-                          href: 'https://wa.me/254703699465',
-                          label: localize('WhatsApp'),
-                          LeftComponent: LegacyWhatsappIcon,
+                          href: '',
+                          label: localize(''),
+                          LeftComponent: ,
                           target: '_blank',
                       }
                     : null,
