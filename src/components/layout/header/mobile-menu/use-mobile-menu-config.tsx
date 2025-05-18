@@ -82,15 +82,7 @@ const useMobileMenuConfig = (client?: RootStore['client']) => {
         ],
         (
             [
-                cs_chat_whatsapp
-                    ? {
-                          as: 'a',
-                          href: '',
-                          label: localize(''),
-                          LeftComponent: ,
-                          target: '_blank',
-                      }
-                    : null,
+                
                 is_livechat_available || icAvailable
                     ? {
                           as: 'button',
