@@ -79,7 +79,7 @@ const BotIcon = () => (
 
 const AppWrapper = observer(() => {
     const { connectionStatus } = useApiBase();
-    const { dashboard, load_modal, run_panel, quick_strategy, summary_card } = useStore();
+    const { bots, load_modal, run_panel, quick_strategy, summary_card } = useStore();
     const {
         active_tab,
         is_chart_modal_visible,
