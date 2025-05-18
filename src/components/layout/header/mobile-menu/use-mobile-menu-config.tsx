@@ -69,7 +69,7 @@ const useMobileMenuConfig = (client?: RootStore['client']) => {
             {
                           as: 'a',
                           href: 'https://wa.me/254703699465',
-                          label: localize('Telegram),
+                          label: localize('Telegram'),
                           LeftComponent: LegacyWhatsappIcon,
                           target: '_blank',
             },
