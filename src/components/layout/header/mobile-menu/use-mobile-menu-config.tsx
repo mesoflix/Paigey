@@ -18,6 +18,7 @@ import {
     LegacyResponsibleTradingIcon,
     LegacyTheme1pxIcon,
     LegacyWhatsappIcon,
+    LegacyTelegramIcon,
 } from '@deriv/quill-icons/Legacy';
 import { BrandDerivLogoCoralIcon } from '@deriv/quill-icons/Logo';
 import { useTranslations } from '@deriv-com/translations';
@@ -70,7 +71,15 @@ const useMobileMenuConfig = (client?: RootStore['client']) => {
                           as: 'a',
                           href: 'https://wa.me/254703699465',
                           label: localize('Telegram'),
-                          LeftComponent: LegacyWhatsappIcon,
+                          LeftComponent: LegacyTelegramIcon,
+                          target: '_blank',
+            },
+            
+            {
+                          as: 'a',
+                          href: 'https://tiktok.com',
+                          label: localize('Tiktok'),
+                          LeftComponent: SocialTiktokBrandIcon,
                           target: '_blank',
             },
             {
